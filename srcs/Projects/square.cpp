@@ -3,102 +3,100 @@
 #include <cmath>
 #include <vector>
 
+// Constants for window dimensions and maximum points for the outer circle
 const int WINDOW_WIDTH = 1600;
 const int WINDOW_HEIGHT = 600;
-float aa = 0;
-float ggg = 0;
-float bb = 0;
-std::vector<std::pair<float, float>> outerPoints;
+const int MAX_POINTS = 2000;
 
-const size_t max_size = 5; // Set the maximum size limit
 
-// Function to add elements to the vector in reverse order with size check
-auto addPoint = [&outerPoints, max_size](float x, float y)
-{
-    // Insert the new point at the beginning of the vector
-    outerPoints.insert(outerPoints.begin(), {x, y});
-
-    // Check if the vector exceeds the maximum size limit
-    if (outerPoints.size() > max_size)
-    {
-        // Remove the last element to maintain the size limit
-        outerPoints.pop_back();
-    }
-};
-
-void drawCircle(float centerX, float centerY, float radius, float speed, int loop, GLfloat size, float *i)
-{
-    // ggg = 0;
-    std::vector<std::pair<float, float>> circlePoints;
-    std::vector<std::pair<float, float>> outerPoints;
-    glPointSize(1);
-    glBegin(GL_POINTS);
-    for (int j = 0; j < 360; ++j)
-    {
-        float angle = j * (3.14159f / 180.0f);
-        float x = centerX + radius * cos(angle);
-        float y = centerY + radius * sin(angle);
-        glVertex2f(x, y);
-        circlePoints.push_back(std::make_pair(x, y));
-    }
-    glEnd();
-
-    int second_circle = (int)(*i) % 360;
-
-    int starting_index = *i - 90 < 0 ? 0 : *i - 90;
-
-    glPointSize(size);
-    glBegin(GL_POINTS);
-    for (int j = starting_index; j < (int)(*i); j++)
-    {
-        glVertex2f(circlePoints[j % 360].first, circlePoints[j % 360].second);
-    }
-
-    *i += (1.0f / speed);
-    glEnd();
-
-    glBegin(GL_LINES);
-    glVertex2f(centerX, centerY);
-    glVertex2f(circlePoints[second_circle].first, circlePoints[second_circle].second);
-    glEnd();
-
-    if (loop > 0)
-    {
-        // std::cout << "(" << circlePoints[second_circle % 360].first << ", " << circlePoints[second_circle % 360].second << ")\n";
-        drawCircle(circlePoints[second_circle].first, circlePoints[second_circle].second, radius / 3, radius / 3, loop - 1, 5, &bb);
-    }
-    if (loop == 0)
-    {
-        //    make the array which contain all the y corrdinate
-        // while (ggg < 300)
-        // {
-        //     glVertex2f(coord.first, coord.)
-        // }
-
-        // Print the length of the vector
-        std::cout << "The length of outerPoints is: " << outerPoints.size() << std::endl;
-        // double new_x = outerPoints.back().first - 0.01;
-        // outerPoints.emplace_back(800, circlePoints[second_circle].second);
-        addPoint(800, circlePoints[second_circle].second);
-        if (ggg <= 150)
-        {
-            ggg += 1.0f / speed;
-        }
-        // std::cout << "==========================================\n";
-        int temp = 0;
-
-        glPointSize(3);
-        glBegin(GL_POINTS);
-        for (const auto &coord : outerPoints)
-        {
-            // std::cout << "{" << coord.first + 0.01 * temp << ", " << coord.second << "},\n";
-            glVertex2f(coord.first + 0.01 * temp, coord.second);
-            //     glVertex2f(coord.first, coord.second);
-            temp++;
-        }
-        glEnd();
-    }
-}
+// // Global variables for animation and point tracking
+// float aa = 0;
+// float bb = 0;
+// std::vector<std::pair<float, float>> outerPoints;
+// // Function to draw a circle and its nested circles with animation
+// void drawCircle(float centerX, float centerY, float radius, float speed, int loop, GLfloat size, float *i)
+// {
+//     // Draw x-axis
+//     glBegin(GL_LINES);
+//     glVertex2f(800, WINDOW_HEIGHT / 2.0f);
+//     glVertex2f(WINDOW_WIDTH, WINDOW_HEIGHT / 2.0f);
+//     glEnd();
+//     // Draw y-axis
+//     glBegin(GL_LINES);
+//     glVertex2f(800, 50);
+//     glVertex2f(800, WINDOW_HEIGHT - 50);
+//     glEnd();
+//     const int CIRCLE_POINTS = 360; // Number of points to define a circle
+//     static std::vector<std::pair<float, float>> circlePoints(CIRCLE_POINTS);
+//     // Precompute circle points if not already done
+//     static bool pointsComputed = false;
+//     if (!pointsComputed)
+//     {
+//         for (int j = 0; j < CIRCLE_POINTS; ++j)
+//         {
+//             float angle = j * (3.14159f / 180.0f);
+//             circlePoints[j] = {std::cos(angle), std::sin(angle)};
+//         }
+//         pointsComputed = true;
+//     }
+//     // Draw the main circle with small points
+//     glPointSize(1);
+//     glBegin(GL_POINTS);
+//     for (int j = 0; j < CIRCLE_POINTS; ++j)
+//     {
+//         float x = centerX + radius * circlePoints[j].first;
+//         float y = centerY + radius * circlePoints[j].second;
+//         glVertex2f(x, y);
+//     }
+//     glEnd();
+//     // Calculate the index for the moving point on the circle
+//     int second_circle = static_cast<int>(*i) % CIRCLE_POINTS;
+//     int starting_index = std::max(static_cast<int>(*i) - 90, 0);
+//     // Draw the moving point with larger size
+//     glPointSize(size);
+//     glBegin(GL_POINTS);
+//     for (int j = starting_index; j < static_cast<int>(*i); j++)
+//     {
+//         float x = centerX + radius * circlePoints[j % CIRCLE_POINTS].first;
+//         float y = centerY + radius * circlePoints[j % CIRCLE_POINTS].second;
+//         glVertex2f(x, y);
+//     }
+//     *i += (1.0f / speed);
+//     glEnd();
+//     // Draw a line from the center to the moving point
+//     glBegin(GL_LINES);
+//     float lineX = centerX + radius * circlePoints[second_circle].first;
+//     float lineY = centerY + radius * circlePoints[second_circle].second;
+//     glVertex2f(centerX, centerY);
+//     glVertex2f(lineX, lineY);
+//     glEnd();
+//     // Recursive call to draw smaller nested circles
+//     if (loop > 0)
+//     {
+//         drawCircle(lineX, lineY, radius / 3, radius / 3, loop - 1, 5, &bb);
+//     }
+//     // Track the outer points and animate them across the screen
+//     if (loop == 0)
+//     {
+//         if (outerPoints.size() >= MAX_POINTS)
+//         {
+//             outerPoints.erase(outerPoints.begin());
+//         }
+//         if (outerPoints.empty() || outerPoints.front().second != lineY)
+//         {
+//             outerPoints.insert(outerPoints.begin(), {800, lineY});
+//         }
+//         int temp = 0;
+//         glPointSize(3);
+//         glBegin(GL_POINTS);
+//         for (const auto &coord : outerPoints)
+//         {
+//             glVertex2f(coord.first + (0.008f * temp) * speed, coord.second);
+//             temp++;
+//         }
+//         glEnd();
+//     }
+// }
 
 // Function to handle key events
 void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
@@ -109,6 +107,7 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     {
         aa = 0;
         bb = 0;
+        outerPoints.clear();
     }
 }
 
@@ -135,10 +134,8 @@ int main()
     // Set the key callback
     glfwSetKeyCallback(window, keyCallback);
 
-    int ddddd = 1;
-    // Loop until the user closes the window
+    // Main loop to render the animation
     while (!glfwWindowShouldClose(window))
-    // while (ddddd <= 100)
     {
         // Clear the buffer
         glClear(GL_COLOR_BUFFER_BIT);
@@ -161,15 +158,11 @@ int main()
         float centerY = WINDOW_HEIGHT / 2.0f;
         drawCircle(centerX, centerY, radius, radius, 1, 5, &aa);
 
-        // // Draw the points
-        // drawPoints();
-
         // Swap front and back buffers
         glfwSwapBuffers(window);
 
         // Poll for and process events
         glfwPollEvents();
-        ddddd = ddddd + 1;
     }
 
     // Terminate GLFW
