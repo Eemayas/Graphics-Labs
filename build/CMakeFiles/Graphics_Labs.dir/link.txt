@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Graphics_Labs.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\Graphics_Labs.dir/objects.a @CMakeFiles\Graphics_Labs.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Graphics_Labs.dir/objects.a -Wl,--no-whole-archive -o Graphics_Labs.exe -Wl,--out-implib,libGraphics_Labs.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Graphics_Labs.dir\linkLibs.rsp
