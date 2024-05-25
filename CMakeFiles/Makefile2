@@ -62,7 +62,11 @@ CMAKE_BINARY_DIR = "E:\6th sem\Graphics\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+<<<<<<< HEAD
 all: CMakeFiles/Graphics_Lab1.dir/all
+=======
+all: CMakeFiles/Graphics_Labs.dir/all
+>>>>>>> lab_4
 all: lib/all
 .PHONY : all
 
@@ -71,7 +75,11 @@ preinstall: lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+<<<<<<< HEAD
 clean: CMakeFiles/Graphics_Lab1.dir/clean
+=======
+clean: CMakeFiles/Graphics_Labs.dir/clean
+>>>>>>> lab_4
 clean: lib/clean
 .PHONY : clean
 
@@ -159,6 +167,7 @@ lib/glfw-3.4/src/clean: lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/clean
 .PHONY : lib/glfw-3.4/src/clean
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for target CMakeFiles/Graphics_Lab1.dir
 
 # All Build rule for target.
@@ -184,6 +193,33 @@ Graphics_Lab1: CMakeFiles/Graphics_Lab1.dir/rule
 CMakeFiles/Graphics_Lab1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Lab1.dir\build.make CMakeFiles/Graphics_Lab1.dir/clean
 .PHONY : CMakeFiles/Graphics_Lab1.dir/clean
+=======
+# Target rules for target CMakeFiles/Graphics_Labs.dir
+
+# All Build rule for target.
+CMakeFiles/Graphics_Labs.dir/all: lib/glad/CMakeFiles/glad.dir/all
+CMakeFiles/Graphics_Labs.dir/all: lib/glfw-3.4/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="E:\6th sem\Graphics\build\CMakeFiles" --progress-num=1,2 "Built target Graphics_Labs"
+.PHONY : CMakeFiles/Graphics_Labs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Graphics_Labs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\6th sem\Graphics\build\CMakeFiles" 26
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Graphics_Labs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\6th sem\Graphics\build\CMakeFiles" 0
+.PHONY : CMakeFiles/Graphics_Labs.dir/rule
+
+# Convenience name for target.
+Graphics_Labs: CMakeFiles/Graphics_Labs.dir/rule
+.PHONY : Graphics_Labs
+
+# clean rule for target.
+CMakeFiles/Graphics_Labs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/clean
+.PHONY : CMakeFiles/Graphics_Labs.dir/clean
+>>>>>>> lab_4
 
 #=============================================================================
 # Target rules for target lib/glad/CMakeFiles/glad.dir

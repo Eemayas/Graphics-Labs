@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 prefix=C:/Program Files (x86)/Graphics_Lab1
 exec_prefix=${prefix}
 includedir=C:/Program Files (x86)/Graphics_Lab1/include
 libdir=C:/Program Files (x86)/Graphics_Lab1/lib
+=======
+prefix=C:/Program Files (x86)/Graphics_Labs
+exec_prefix=${prefix}
+includedir=C:/Program Files (x86)/Graphics_Labs/include
+libdir=C:/Program Files (x86)/Graphics_Labs/lib
+>>>>>>> lab_4
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input

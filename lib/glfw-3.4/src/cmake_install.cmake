@@ -2,7 +2,11 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Graphics_Lab1")
+=======
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Graphics_Labs")
+>>>>>>> lab_4
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

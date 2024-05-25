@@ -161,6 +161,7 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named Graphics_Lab1
 
 # Build rule for target.
@@ -172,6 +173,19 @@ Graphics_Lab1: cmake_check_build_system
 Graphics_Lab1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Lab1.dir\build.make CMakeFiles/Graphics_Lab1.dir/build
 .PHONY : Graphics_Lab1/fast
+=======
+# Target rules for targets named Graphics_Labs
+
+# Build rule for target.
+Graphics_Labs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Graphics_Labs
+.PHONY : Graphics_Labs
+
+# fast build rule for target.
+Graphics_Labs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/build
+.PHONY : Graphics_Labs/fast
+>>>>>>> lab_4
 
 #=============================================================================
 # Target rules for targets named glad
@@ -225,6 +239,7 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f lib\glfw-3.4\src\CMakeFiles\update_mappings.dir\build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+<<<<<<< HEAD
 src/Projects/square.obj: src/Projects/square.cpp.obj
 .PHONY : src/Projects/square.obj
 
@@ -248,6 +263,31 @@ src/Projects/square.s: src/Projects/square.cpp.s
 src/Projects/square.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Lab1.dir\build.make CMakeFiles/Graphics_Lab1.dir/src/Projects/square.cpp.s
 .PHONY : src/Projects/square.cpp.s
+=======
+srcs/Projects/square.obj: srcs/Projects/square.cpp.obj
+.PHONY : srcs/Projects/square.obj
+
+# target to build an object file
+srcs/Projects/square.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj
+.PHONY : srcs/Projects/square.cpp.obj
+
+srcs/Projects/square.i: srcs/Projects/square.cpp.i
+.PHONY : srcs/Projects/square.i
+
+# target to preprocess a source file
+srcs/Projects/square.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.i
+.PHONY : srcs/Projects/square.cpp.i
+
+srcs/Projects/square.s: srcs/Projects/square.cpp.s
+.PHONY : srcs/Projects/square.s
+
+# target to generate assembly for a file
+srcs/Projects/square.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.s
+.PHONY : srcs/Projects/square.cpp.s
+>>>>>>> lab_4
 
 # Help Target
 help:
@@ -263,12 +303,21 @@ help:
 	@echo ... rebuild_cache
 	@echo ... uninstall
 	@echo ... update_mappings
+<<<<<<< HEAD
 	@echo ... Graphics_Lab1
 	@echo ... glad
 	@echo ... glfw
 	@echo ... src/Projects/square.obj
 	@echo ... src/Projects/square.i
 	@echo ... src/Projects/square.s
+=======
+	@echo ... Graphics_Labs
+	@echo ... glad
+	@echo ... glfw
+	@echo ... srcs/Projects/square.obj
+	@echo ... srcs/Projects/square.i
+	@echo ... srcs/Projects/square.s
+>>>>>>> lab_4
 .PHONY : help
 
 

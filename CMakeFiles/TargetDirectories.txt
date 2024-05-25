@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 E:/6th sem/Graphics/build/CMakeFiles/Graphics_Lab1.dir
+=======
+E:/6th sem/Graphics/build/CMakeFiles/Graphics_Labs.dir
+>>>>>>> lab_4
 E:/6th sem/Graphics/build/CMakeFiles/edit_cache.dir
 E:/6th sem/Graphics/build/CMakeFiles/rebuild_cache.dir
 E:/6th sem/Graphics/build/CMakeFiles/list_install_components.dir

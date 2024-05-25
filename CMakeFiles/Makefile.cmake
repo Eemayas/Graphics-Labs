@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
+<<<<<<< HEAD
   "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompiler.cmake.in"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake"
@@ -104,16 +105,40 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+=======
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDependentOption.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakePackageConfigHelpers.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckLibraryExists.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake"
+>>>>>>> lab_4
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindDoxygen.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenGL.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindThreads.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+<<<<<<< HEAD
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Determine-CXX.cmake"
+=======
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake"
+>>>>>>> lab_4
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -147,12 +172,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+<<<<<<< HEAD
   "CMakeFiles/3.29.1/CMakeSystem.cmake"
   "CMakeFiles/3.29.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeCCompiler.cmake"
+=======
+>>>>>>> lab_4
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -167,7 +195,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+<<<<<<< HEAD
   "CMakeFiles/Graphics_Lab1.dir/DependInfo.cmake"
+=======
+  "CMakeFiles/Graphics_Labs.dir/DependInfo.cmake"
+>>>>>>> lab_4
   "lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "lib/glfw-3.4/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "lib/glfw-3.4/src/CMakeFiles/glfw.dir/DependInfo.cmake"

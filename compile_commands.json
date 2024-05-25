@@ -1,9 +1,15 @@
 [
 {
   "directory": "E:/6th sem/Graphics/build",
+<<<<<<< HEAD
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Graphics_Lab1.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Graphics_Lab1.dir\\src\\Projects\\square.cpp.obj -c \"E:\\6th sem\\Graphics\\src\\Projects\\square.cpp\"",
   "file": "E:/6th sem/Graphics/src/Projects/square.cpp",
   "output": "CMakeFiles/Graphics_Lab1.dir/src/Projects/square.cpp.obj"
+=======
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Graphics_Labs.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Graphics_Labs.dir\\srcs\\Projects\\square.cpp.obj -c \"E:\\6th sem\\Graphics\\srcs\\Projects\\square.cpp\"",
+  "file": "E:/6th sem/Graphics/srcs/Projects/square.cpp",
+  "output": "CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj"
+>>>>>>> lab_4
 },
 {
   "directory": "E:/6th sem/Graphics/build/lib/glad",
