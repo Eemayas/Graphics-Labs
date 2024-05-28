@@ -225,29 +225,29 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f lib\glfw-3.4\src\CMakeFiles\update_mappings.dir\build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
-srcs/Projects/square.obj: srcs/Projects/square.cpp.obj
-.PHONY : srcs/Projects/square.obj
+srcs/Lab_4/transformation.obj: srcs/Lab_4/transformation.cpp.obj
+.PHONY : srcs/Lab_4/transformation.obj
 
 # target to build an object file
-srcs/Projects/square.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj
-.PHONY : srcs/Projects/square.cpp.obj
+srcs/Lab_4/transformation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj
+.PHONY : srcs/Lab_4/transformation.cpp.obj
 
-srcs/Projects/square.i: srcs/Projects/square.cpp.i
-.PHONY : srcs/Projects/square.i
+srcs/Lab_4/transformation.i: srcs/Lab_4/transformation.cpp.i
+.PHONY : srcs/Lab_4/transformation.i
 
 # target to preprocess a source file
-srcs/Projects/square.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.i
-.PHONY : srcs/Projects/square.cpp.i
+srcs/Lab_4/transformation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.i
+.PHONY : srcs/Lab_4/transformation.cpp.i
 
-srcs/Projects/square.s: srcs/Projects/square.cpp.s
-.PHONY : srcs/Projects/square.s
+srcs/Lab_4/transformation.s: srcs/Lab_4/transformation.cpp.s
+.PHONY : srcs/Lab_4/transformation.s
 
 # target to generate assembly for a file
-srcs/Projects/square.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.s
-.PHONY : srcs/Projects/square.cpp.s
+srcs/Lab_4/transformation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.s
+.PHONY : srcs/Lab_4/transformation.cpp.s
 
 # Help Target
 help:
@@ -266,9 +266,9 @@ help:
 	@echo ... Graphics_Labs
 	@echo ... glad
 	@echo ... glfw
-	@echo ... srcs/Projects/square.obj
-	@echo ... srcs/Projects/square.i
-	@echo ... srcs/Projects/square.s
+	@echo ... srcs/Lab_4/transformation.obj
+	@echo ... srcs/Lab_4/transformation.i
+	@echo ... srcs/Lab_4/transformation.s
 .PHONY : help
 
 

@@ -54,7 +54,7 @@ void drawEllipse(int xc, int yc, int rx, int ry)
     }
 
     // Drawing the ellipse
-    glPointSize(1);
+    glPointSize(5);
     glBegin(GL_POINTS);
     glColor3f(0.0f, 0.0f, 0.0f); // Black color
     for (auto &point : ellipsePoints)

@@ -2,15 +2,13 @@
 #include <iostream>
 #include <cmath>
 
-// Define colors for drawing
+// Define colors as arrays of floats
 float black[] = {0.0f, 0.0f, 0.0f, 1.0f};
 float red[] = {1.0f, 0.0f, 0.0f, 1.0f};
-
-// Define window dimensions
 const int WINDOW_WIDTH = 800;
 const int WINDOW_HEIGHT = 800;
 
-// Structure to hold a point in 3D space
+// Define a structure to represent a point in 3D space
 struct Point
 {
     float x, y, z;
@@ -18,12 +16,20 @@ struct Point
 
 // Define the vertices of a rectangle
 Point rectangle[4] = {
+    // {0.2, 0.3, 1},
+    // {0.6, 0.3, 1},
+    // {0.6, 0.7, 1},
+    // {0.2, 0.7, 1}};
     {0.1, 0.1, 1},
     {0.5, 0.1, 1},
     {0.5, 0.5, 1},
     {0.1, 0.5, 1}};
 
-// Function to set a 3x3 matrix to the identity matrix
+// (0.2, 0.3)
+// (0.6, 0.3)
+// (0.6, 0.7)
+// (0.2, 0.7)
+// Function to generate the identity matrix
 void setIdentityMatrix(float matrix[3][3])
 {
     matrix[0][0] = 1;
@@ -37,7 +43,7 @@ void setIdentityMatrix(float matrix[3][3])
     matrix[2][2] = 1;
 }
 
-// Function to set a 3x3 rotation matrix
+// Function to create a rotation matrix
 void rotate(float angle, float matrix[3][3])
 {
     setIdentityMatrix(matrix);
@@ -48,7 +54,7 @@ void rotate(float angle, float matrix[3][3])
     matrix[1][1] = cos(rad);
 }
 
-// Function to set a 3x3 scaling matrix
+// Function to create a scaling matrix
 void scale(float sx, float sy, float matrix[3][3])
 {
     setIdentityMatrix(matrix);
@@ -56,25 +62,25 @@ void scale(float sx, float sy, float matrix[3][3])
     matrix[1][1] = sy;
 }
 
-// Function to set a 3x3 reflection matrix
+// Function to create a reflection matrix
 void reflect(bool reflectX, bool reflectY, float matrix[3][3])
 {
     setIdentityMatrix(matrix);
     if (reflectX)
-        matrix[0][0] = -1;
+        matrix[0][0] = -1; // Reflect across the x-axis
     if (reflectY)
-        matrix[1][1] = -1;
+        matrix[1][1] = -1; // Reflect across the y-axis
 }
 
-// Function to set a 3x3 shear matrix
+// Function to create a shearing matrix
 void shear(float shx, float shy, float matrix[3][3])
 {
     setIdentityMatrix(matrix);
-    matrix[0][1] = shx;
-    matrix[1][0] = shy;
+    matrix[0][1] = shx; // Shear along the x-axis
+    matrix[1][0] = shy; // Shear along the y-axis
 }
 
-// Function to set a 3x3 translation matrix
+// Function to create a translation matrix
 void translate(float tx, float ty, float matrix[3][3])
 {
     setIdentityMatrix(matrix);
@@ -82,7 +88,7 @@ void translate(float tx, float ty, float matrix[3][3])
     matrix[1][2] = ty;
 }
 
-// Function to multiply a 3x3 matrix by a 3x1 vector
+// Function to multiply two matrices
 void multiplyMatricesPoints(float result[3][1], float matrixA[3][3], float matrixB[3][1])
 {
     for (int i = 0; i < 3; i++)
@@ -95,14 +101,14 @@ void multiplyMatricesPoints(float result[3][1], float matrixA[3][3], float matri
     }
 }
 
-// Function to multiply two 3x3 matrices
-void multiplyMatrices(float a[3][3], float b[3][3], float result[3][3])
+// Define a function to multiply two 3x3 matrices
+void multiplyMatricesPoints(float a[3][3], float b[3][3], float result[3][3])
 {
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            result[i][j] = 0.0f;
+            result[i][j] = 0;
             for (int k = 0; k < 3; k++)
             {
                 result[i][j] += a[i][k] * b[k][j];
@@ -111,57 +117,124 @@ void multiplyMatrices(float a[3][3], float b[3][3], float result[3][3])
     }
 }
 
-// Function to apply a transformation matrix to a set of points
+// Define a function to multiply two 3x3 matrices
+void multiplyMatrices(float a[3][3], float b[3][3], float result[3][3])
+{
+    // Initialize the result matrix to zero
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            result[i][j] = 0.0f;
+        }
+    }
+
+    // Perform the matrix multiplication
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            for (int k = 0; k < 3; k++)
+            {
+                result[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    // Print the result matrix
+    std::cout << "A Matrix:" << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    // Print the B matrix
+    std::cout << "Resultant Matrix:" << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            std::cout << b[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    // Print the result matrix
+    std::cout << "Resultant Matrix:" << std::endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            std::cout << result[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+// Function to apply a transformation matrix to an array of points
 void applyTransformation(float matrix[3][3], Point *points, int numPoints)
 {
     for (int i = 0; i < numPoints; i++)
     {
         float vector[3][1] = {{points[i].x}, {points[i].y}, {points[i].z}};
         float result[3][1];
+
+        // Multiply the transformation matrix with the point vector
         multiplyMatricesPoints(result, matrix, vector);
+
+        // Update the point coordinates with the result
         points[i].x = result[0][0];
         points[i].y = result[1][0];
         points[i].z = result[2][0];
-        // std::cout << "(" << points[i].x << ", " << points[i].y << ", " << points[i].z << ")\n";
     }
 }
 
-// Function to display a shape with a specified color
+// Function to display a shape on the screen
 void display(Point *shape, float *color)
 {
-    glColor4fv(color);   // Set the current color
-    glBegin(GL_POLYGON); // Start drawing a polygon
+    glColor4fv(color);
+    glBegin(GL_POLYGON);
+    // std::cout << "--------------------------------------------------------------------------------\n";
+
+    // Loop through the points and draw them
     for (int i = 0; i < 4; i++)
     {
-        glVertex2f(shape[i].x, shape[i].y); // Specify each vertex
+        // std::cout << "(" << shape[i].x << ", " << shape[i].y << ")\n";
+        glVertex2f(shape[i].x, shape[i].y);
     }
-    glEnd();   // End drawing the polygon
-    glFlush(); // Ensure all OpenGL commands are executed
+
+    glEnd();
+    glFlush();
 }
 
-// Function to draw coordinate axes
+// Function to draw the x and y axes
 void drawAxes()
 {
     glColor3f(0.0, 0.0, 0.0); // Set color to black
-    glBegin(GL_LINES);        // Start drawing lines
-    glVertex2f(-1.0, 0.0);    // X-axis
+    glBegin(GL_LINES);
+
+    // Draw the x-axis
+    glVertex2f(-1.0, 0.0);
     glVertex2f(1.0, 0.0);
-    glVertex2f(0.0, -1.0); // Y-axis
+
+    // Draw the y-axis
+    glVertex2f(0.0, -1.0);
     glVertex2f(0.0, 1.0);
-    glEnd();   // End drawing lines
-    glFlush(); // Ensure all OpenGL commands are executed
+
+    glEnd();
+    glFlush();
 }
 
-// GLFW key callback function to handle ESC key
+// Callback function to handle key events
 void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-    {
-        glfwSetWindowShouldClose(window, GLFW_TRUE); // Close the window if ESC is pressed
-    }
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
-// Function to copy a matrix
+// Function to copy a 3x3 matrix
 void copyMatrix(float source[3][3], float destination[3][3])
 {
     for (int i = 0; i < 3; i++)
@@ -180,14 +253,14 @@ int main()
     bool continueLoop = true;
     bool reflectX;
 
-    // Copy original rectangle vertices to a new array for transformations
+    // Copy the original rectangle vertices to a new array for transformation
     Point transformedRectangle[4];
     for (int i = 0; i < 4; i++)
     {
         transformedRectangle[i] = rectangle[i];
     }
 
-    // User input for choosing a transformation
+    // Ask the user to choose a transformation
     std::cout << "Choose a transformation to apply to the rectangle:\n"
               << "1. Translate\n"
               << "2. Rotate\n"
@@ -198,7 +271,7 @@ int main()
               << "Enter your choice: ";
     std::cin >> choice;
 
-    // Get specific transformation parameters based on the user's choice
+    // Get the appropriate parameters based on the user's choice
     switch (choice)
     {
     case 1:
@@ -227,133 +300,121 @@ int main()
     default:
         std::cout << "Invalid choice" << std::endl;
         return 0;
+        break;
     }
 
-    // Initialize transformation matrices
+    // Create an identity matrix
     float matrix[3][3];
     setIdentityMatrix(matrix);
 
+    // Create an identity matrix
     float tempMatrix[3][3];
     setIdentityMatrix(tempMatrix);
 
+    // Create an identity matrix
     float tempMatrix2[3][3];
     setIdentityMatrix(tempMatrix2);
 
-    // Apply the selected transformation
     switch (choice)
     {
     case 1:
-        // Apply translation transformation
-        translate(tx, ty, matrix);                            // Set translation matrix with tx, ty values
-        applyTransformation(matrix, transformedRectangle, 4); // Apply translation to the rectangle vertices
+        translate(tx, ty, matrix);
+        applyTransformation(matrix, transformedRectangle, 4);
         break;
     case 2:
-        // Apply rotation transformation
-        rotate(angle, matrix);                                // Set rotation matrix with the given angle
-        applyTransformation(matrix, transformedRectangle, 4); // Apply rotation to the rectangle vertices
+        rotate(angle, matrix);
+        applyTransformation(matrix, transformedRectangle, 4);
         break;
     case 3:
-        // Apply scaling transformation
-        scale(sx, sy, matrix);                                // Set scaling matrix with sx, sy values
-        applyTransformation(matrix, transformedRectangle, 4); // Apply scaling to the rectangle vertices
+        scale(sx, sy, matrix);
+        applyTransformation(matrix, transformedRectangle, 4);
         break;
     case 4:
-        // Apply reflection transformation
-        reflect(reflectX, !reflectX, matrix);                 // Set reflection matrix based on reflectX
-        applyTransformation(matrix, transformedRectangle, 4); // Apply reflection to the rectangle vertices
+        reflect(reflectX, !reflectX, matrix);
+        applyTransformation(matrix, transformedRectangle, 4);
         break;
     case 5:
-        // Apply shear transformation
-        shear(shx, shy, matrix);                              // Set shear matrix with shx, shy values
-        applyTransformation(matrix, transformedRectangle, 4); // Apply shear to the rectangle vertices
+        shear(shx, shy, matrix);
+        applyTransformation(matrix, transformedRectangle, 4);
         break;
     case 6:
-        // Apply composite transformation
-        // Copy the current transformation matrix to tempMatrix for further composite transformations
-        copyMatrix(matrix, tempMatrix);
-
-        // Loop to apply multiple transformations
+        copyMatrix(matrix, tempMatrix); // Initialize tempMatrix with the identity matrix
         while (continueLoop)
         {
-            // User input for choosing a transformation
             std::cout << "Choose a transformation to apply to the rectangle:\n"
                       << "1. Translate\n"
                       << "2. Rotate\n"
                       << "3. Scale\n"
                       << "4. Reflect\n"
                       << "5. Shear\n"
-                      << "6. Apply and Exit\n"
+                      << "6. Exit\n"
                       << "Enter your choice: ";
             std::cin >> choice;
 
             switch (choice)
             {
             case 1:
-                // Apply translation transformation
                 std::cout << "Enter translation values (tx ty): ";
                 std::cin >> tx >> ty;
-                translate(tx, ty, matrix);                         // Set translation matrix
-                copyMatrix(tempMatrix, tempMatrix2);               // Copy current composite matrix
-                multiplyMatrices(matrix, tempMatrix2, tempMatrix); // Update composite matrix with translation
+                translate(tx, ty, matrix);
+                copyMatrix(tempMatrix, tempMatrix2);
+                multiplyMatrices(matrix, tempMatrix2, tempMatrix);
                 break;
             case 2:
-                // Apply rotation transformation
                 std::cout << "Enter rotation angle: ";
                 std::cin >> angle;
-                rotate(angle, matrix);                             // Set rotation matrix
-                copyMatrix(tempMatrix, tempMatrix2);               // Copy current composite matrix
-                multiplyMatrices(matrix, tempMatrix2, tempMatrix); // Update composite matrix with rotation
+                rotate(angle, matrix);
+                copyMatrix(tempMatrix, tempMatrix2);
+                multiplyMatrices(matrix, tempMatrix2, tempMatrix);
                 break;
             case 3:
-                // Apply scaling transformation
                 std::cout << "Enter scaling factors (sx sy): ";
                 std::cin >> sx >> sy;
-                scale(sx, sy, matrix);                             // Set scaling matrix
-                copyMatrix(tempMatrix, tempMatrix2);               // Copy current composite matrix
-                multiplyMatrices(matrix, tempMatrix2, tempMatrix); // Update composite matrix with scaling
+                scale(sx, sy, matrix);
+                copyMatrix(tempMatrix, tempMatrix2);
+                multiplyMatrices(matrix, tempMatrix2, tempMatrix);
                 break;
             case 4:
-                // Apply reflection transformation
                 std::cout << "Reflect across ......? (0 for x-axis, 1 for y-axis): ";
                 std::cin >> reflectX;
-                reflect(reflectX, !reflectX, matrix);              // Set reflection matrix
-                copyMatrix(tempMatrix, tempMatrix2);               // Copy current composite matrix
-                multiplyMatrices(matrix, tempMatrix2, tempMatrix); // Update composite matrix with reflection
+                reflect(reflectX, !reflectX, matrix);
+                copyMatrix(tempMatrix, tempMatrix2);
+                multiplyMatrices(matrix, tempMatrix2, tempMatrix);
                 break;
             case 5:
-                // Apply shear transformation
                 std::cout << "Enter shear values (shx shy): ";
                 std::cin >> shx >> shy;
-                shear(shx, shy, matrix);                           // Set shear matrix
-                copyMatrix(tempMatrix, tempMatrix2);               // Copy current composite matrix
-                multiplyMatrices(matrix, tempMatrix2, tempMatrix); // Update composite matrix with shear
+                shear(shx, shy, matrix);
+                copyMatrix(tempMatrix, tempMatrix2);
+                multiplyMatrices(matrix, tempMatrix2, tempMatrix);
                 break;
             case 6:
-                // Exit loop to apply composite transformation
                 continueLoop = false;
                 break;
             default:
                 std::cout << "Invalid choice" << std::endl;
                 return 0;
+                break;
             }
         }
 
-        // Apply the final composite transformation
         applyTransformation(tempMatrix, transformedRectangle, 4);
         break;
     default:
-        // Handle invalid transformation choice
         std::cout << "Invalid choice" << std::endl;
+        break;
     }
 
-    // Initialize GLFW and create a window
     GLFWwindow *window;
+
+    // Initialize GLFW library
     if (!glfwInit())
     {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return -1;
     }
 
+    // Create a windowed mode window and its OpenGL context
     window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Transformation", NULL, NULL);
     if (!window)
     {
@@ -361,29 +422,54 @@ int main()
         return -1;
     }
 
+    // Make the window's context current
     glfwMakeContextCurrent(window);
+
+    // Set the key callback function
     glfwSetKeyCallback(window, keyCallback);
 
-    // Main loop to render the rectangle and apply transformations
+    // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
     {
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set the background color to white
-        glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer
+        // Clear the window with a white background
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-        glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT); // Set the viewport to cover the window
-        glMatrixMode(GL_PROJECTION);                   // Switch to projection matrix
-        glLoadIdentity();                              // Reset the projection matrix
-        glOrtho(-1.0, 1.0, -1.0, 1.0, 0, 1);           // Set orthographic projection
+        // Set the viewport and projection matrix
+        glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glOrtho(-1.0, 1.0, -1.0, 1.0, 0, 1); // Set orthographic projection for a normalized coordinate system
 
-        drawAxes(); // Draw coordinate axes
+        // // Create an identity matrix
+        // float matrix[3][3];
+        // setIdentityMatrix(matrix);
 
-        display(rectangle, black);          // Draw the original rectangle in black
-        display(transformedRectangle, red); // Draw the transformed rectangle in red
+        // // Create an identity matrix
+        // float tempMatrix[3][3];
+        // setIdentityMatrix(tempMatrix);
 
-        glfwSwapBuffers(window); // Swap the front and back buffers
-        glfwPollEvents();        // Poll for and process events
+        // // Create an identity matrix
+        // float tempMatrix2[3][3];
+        // setIdentityMatrix(tempMatrix2);
+
+        // Draw the x and y axes
+        drawAxes();
+
+        // Display the original rectangle in black
+        display(rectangle, black);
+
+        // Display the transformed rectangle in red
+        display(transformedRectangle, red);
+
+        // Swap the front and back buffers
+        glfwSwapBuffers(window);
+
+        // Poll for and process events
+        glfwPollEvents();
     }
 
-    glfwTerminate(); // Terminate GLFW
+    // Clean up and exit
+    glfwTerminate();
     return 0;
 }

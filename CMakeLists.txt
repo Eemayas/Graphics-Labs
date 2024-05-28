@@ -20,13 +20,13 @@ endif()
 # set(SRCS "src/Lab 2/Lab 2_DDA.cpp")
 # set(SRCS "src/Lab 2/Lab 2_Histogram.cpp")
 
-# set(SRCS "src/Lab 3/Lab 3_Midpoint.cpp")
-# set(SRCS "src/Lab 3/Lab 3_Ellipse.cpp")
-# set(SRCS "src/Lab 3/Lab 3_Polar.cpp")
+# set(SRCS "srcs/Lab 3/Lab 3_Midpoint.cpp")
+# set(SRCS "srcs/Lab 3/Lab 3_Ellipse.cpp")
+# set(SRCS "srcs/Lab 3/Lab 3_Polar.cpp")
 
-# set(SRCS "src/Lab 4/transformation.cpp")
+set(SRCS "srcs/Lab 4/transformation.cpp")
 
-set(SRCS "srcs/Projects/square.cpp")
+# set(SRCS "srcs/Projects/square.cpp")
 # set(SRCS "src/Projects/square copy 4 working.cpp")
 
 

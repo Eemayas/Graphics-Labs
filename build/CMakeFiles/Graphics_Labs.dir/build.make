@@ -68,29 +68,29 @@ include CMakeFiles/Graphics_Labs.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Graphics_Labs.dir/flags.make
 
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj: CMakeFiles/Graphics_Labs.dir/flags.make
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj: CMakeFiles/Graphics_Labs.dir/includes_CXX.rsp
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj: E:/6th\ sem/Graphics/srcs/Projects/square.cpp
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj: CMakeFiles/Graphics_Labs.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\6th sem\Graphics\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj -MF CMakeFiles\Graphics_Labs.dir\srcs\Projects\square.cpp.obj.d -o CMakeFiles\Graphics_Labs.dir\srcs\Projects\square.cpp.obj -c "E:\6th sem\Graphics\srcs\Projects\square.cpp"
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj: CMakeFiles/Graphics_Labs.dir/flags.make
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj: CMakeFiles/Graphics_Labs.dir/includes_CXX.rsp
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj: E:/6th\ sem/Graphics/srcs/Lab\ 4/transformation.cpp
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj: CMakeFiles/Graphics_Labs.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\6th sem\Graphics\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj -MF CMakeFiles\Graphics_Labs.dir\srcs\Lab_4\transformation.cpp.obj.d -o CMakeFiles\Graphics_Labs.dir\srcs\Lab_4\transformation.cpp.obj -c "E:\6th sem\Graphics\srcs\Lab 4\transformation.cpp"
 
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\6th sem\Graphics\srcs\Projects\square.cpp" > CMakeFiles\Graphics_Labs.dir\srcs\Projects\square.cpp.i
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\6th sem\Graphics\srcs\Lab 4\transformation.cpp" > CMakeFiles\Graphics_Labs.dir\srcs\Lab_4\transformation.cpp.i
 
-CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\6th sem\Graphics\srcs\Projects\square.cpp" -o CMakeFiles\Graphics_Labs.dir\srcs\Projects\square.cpp.s
+CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\6th sem\Graphics\srcs\Lab 4\transformation.cpp" -o CMakeFiles\Graphics_Labs.dir\srcs\Lab_4\transformation.cpp.s
 
 # Object files for target Graphics_Labs
 Graphics_Labs_OBJECTS = \
-"CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj"
+"CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj"
 
 # External object files for target Graphics_Labs
 Graphics_Labs_EXTERNAL_OBJECTS =
 
-Graphics_Labs.exe: CMakeFiles/Graphics_Labs.dir/srcs/Projects/square.cpp.obj
+Graphics_Labs.exe: CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj
 Graphics_Labs.exe: CMakeFiles/Graphics_Labs.dir/build.make
 Graphics_Labs.exe: lib/glfw-3.4/src/libglfw3.a
 Graphics_Labs.exe: lib/glad/libglad.a
