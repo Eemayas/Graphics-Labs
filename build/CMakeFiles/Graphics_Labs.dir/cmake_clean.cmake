@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj"
-  "CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj.d"
+  "CMakeFiles/Graphics_Labs.dir/srcs/Lab_6/Lab_6_transformation.cpp.obj"
+  "CMakeFiles/Graphics_Labs.dir/srcs/Lab_6/Lab_6_transformation.cpp.obj.d"
   "Graphics_Labs.exe"
   "Graphics_Labs.exe.manifest"
   "Graphics_Labs.pdb"

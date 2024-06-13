@@ -26,7 +26,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-C.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/GNU.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/FetchContent.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindDoxygen.cmake"
+  "C:/Program Files/CMake/share/cmake-3.29/Modules/FindGit.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindOpenGL.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
@@ -48,6 +52,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.29.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.29.1/CMakeSystem.cmake"
+  "_deps/glm-src/CMakeLists.txt"
+  "_deps/glm-src/glm/CMakeLists.txt"
   "E:/6th sem/Graphics/lib/CMakeLists.txt"
   "E:/6th sem/Graphics/lib/glad/CMakeLists.txt"
   "E:/6th sem/Graphics/lib/glfw-3.4/CMake/cmake_uninstall.cmake.in"
@@ -67,6 +73,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/glm-subbuild/CMakeLists.txt"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw-3.4/src/glfw3Config.cmake"
@@ -76,11 +83,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/glfw-3.4/src/glfw3.pc"
   "lib/glfw-3.4/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw-3.4/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/glm-build/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/glm-build/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Graphics_Labs.dir/DependInfo.cmake"
+  "CMakeFiles/OpenGL_Lab.dir/DependInfo.cmake"
   "lib/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "lib/glfw-3.4/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "lib/glfw-3.4/src/CMakeFiles/glfw.dir/DependInfo.cmake"

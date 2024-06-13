@@ -169,6 +169,36 @@
 			"path" : "lib/CMakeLists.txt"
 		},
 		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FetchContent.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/ExternalProject/shared_internal_commands.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindGit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FetchContent/CMakeLists.cmake.in"
+		},
+		{
 			"path" : "lib/glad/CMakeLists.txt"
 		},
 		{
@@ -268,6 +298,14 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/glm-src/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/_deps/glm-src/glm/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

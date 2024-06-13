@@ -41,6 +41,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("E:/6th sem/Graphics/build/lib/glad/cmake_install.cmake")
   include("E:/6th sem/Graphics/build/lib/glfw-3.4/cmake_install.cmake")
+  include("E:/6th sem/Graphics/build/_deps/glm-build/cmake_install.cmake")
 
 endif()
 

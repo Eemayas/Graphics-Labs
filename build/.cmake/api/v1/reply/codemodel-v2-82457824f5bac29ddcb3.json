@@ -28,13 +28,14 @@
 					"childIndexes" : 
 					[
 						2,
-						3
+						3,
+						6
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-lib-Debug-e9069484d90298468a11.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.10"
+						"string" : "3.11"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -103,6 +104,32 @@
 					"parentIndex" : 3,
 					"projectIndex" : 2,
 					"source" : "lib/glfw-3.4/docs"
+				},
+				{
+					"build" : "_deps/glm-build",
+					"childIndexes" : 
+					[
+						7
+					],
+					"jsonFile" : "directory-_deps.glm-build-Debug-935468e39a55af38ff33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "build/_deps/glm-src"
+				},
+				{
+					"build" : "_deps/glm-build/glm",
+					"jsonFile" : "directory-_deps.glm-build.glm-Debug-ae6a6ae02e317224d57b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 3,
+					"source" : "build/_deps/glm-src/glm"
 				}
 			],
 			"name" : "Debug",
@@ -112,14 +139,15 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
 						0,
 						1
 					],
-					"name" : "Graphics_Labs",
+					"name" : "OpenGL_Lab",
 					"targetIndexes" : 
 					[
 						0
@@ -152,15 +180,24 @@
 						3,
 						4
 					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6,
+						7
+					],
+					"name" : "glm",
+					"parentIndex" : 0
 				}
 			],
 			"targets" : 
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Graphics_Labs::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Graphics_Labs-Debug-645e96c7c4c6a4d9df3d.json",
-					"name" : "Graphics_Labs",
+					"id" : "OpenGL_Lab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGL_Lab-Debug-1e3bdbc6096ad1b72a92.json",
+					"name" : "OpenGL_Lab",
 					"projectIndex" : 0
 				},
 				{

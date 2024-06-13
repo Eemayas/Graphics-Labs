@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/6th sem/Graphics/srcs/Lab 4/transformation.cpp" "CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj" "gcc" "CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj.d"
+  "E:/6th sem/Graphics/srcs/Lab 6/Lab 6_transformation.cpp" "CMakeFiles/Graphics_Labs.dir/srcs/Lab_6/Lab_6_transformation.cpp.obj" "gcc" "CMakeFiles/Graphics_Labs.dir/srcs/Lab_6/Lab_6_transformation.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

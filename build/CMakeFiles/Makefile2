@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = "E:\6th sem\Graphics\build"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Graphics_Labs.dir/all
+all: CMakeFiles/OpenGL_Lab.dir/all
 all: lib/all
 .PHONY : all
 
@@ -71,9 +71,39 @@ preinstall: lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Graphics_Labs.dir/clean
+clean: CMakeFiles/OpenGL_Lab.dir/clean
 clean: lib/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/glm-build
+
+# Recursive "all" directory target.
+_deps/glm-build/all: _deps/glm-build/glm/all
+.PHONY : _deps/glm-build/all
+
+# Recursive "preinstall" directory target.
+_deps/glm-build/preinstall: _deps/glm-build/glm/preinstall
+.PHONY : _deps/glm-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/glm-build/clean: _deps/glm-build/glm/clean
+.PHONY : _deps/glm-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/glm-build/glm
+
+# Recursive "all" directory target.
+_deps/glm-build/glm/all:
+.PHONY : _deps/glm-build/glm/all
+
+# Recursive "preinstall" directory target.
+_deps/glm-build/glm/preinstall:
+.PHONY : _deps/glm-build/glm/preinstall
+
+# Recursive "clean" directory target.
+_deps/glm-build/glm/clean:
+.PHONY : _deps/glm-build/glm/clean
 
 #=============================================================================
 # Directory level rules for directory lib
@@ -81,16 +111,19 @@ clean: lib/clean
 # Recursive "all" directory target.
 lib/all: lib/glad/all
 lib/all: lib/glfw-3.4/all
+lib/all: _deps/glm-build/all
 .PHONY : lib/all
 
 # Recursive "preinstall" directory target.
 lib/preinstall: lib/glad/preinstall
 lib/preinstall: lib/glfw-3.4/preinstall
+lib/preinstall: _deps/glm-build/preinstall
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
 lib/clean: lib/glad/clean
 lib/clean: lib/glfw-3.4/clean
+lib/clean: _deps/glm-build/clean
 .PHONY : lib/clean
 
 #=============================================================================
@@ -159,31 +192,31 @@ lib/glfw-3.4/src/clean: lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/clean
 .PHONY : lib/glfw-3.4/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Graphics_Labs.dir
+# Target rules for target CMakeFiles/OpenGL_Lab.dir
 
 # All Build rule for target.
-CMakeFiles/Graphics_Labs.dir/all: lib/glad/CMakeFiles/glad.dir/all
-CMakeFiles/Graphics_Labs.dir/all: lib/glfw-3.4/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="E:\6th sem\Graphics\build\CMakeFiles" --progress-num=1,2 "Built target Graphics_Labs"
-.PHONY : CMakeFiles/Graphics_Labs.dir/all
+CMakeFiles/OpenGL_Lab.dir/all: lib/glad/CMakeFiles/glad.dir/all
+CMakeFiles/OpenGL_Lab.dir/all: lib/glfw-3.4/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="E:\6th sem\Graphics\build\CMakeFiles" --progress-num=1,2 "Built target OpenGL_Lab"
+.PHONY : CMakeFiles/OpenGL_Lab.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Graphics_Labs.dir/rule: cmake_check_build_system
+CMakeFiles/OpenGL_Lab.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "E:\6th sem\Graphics\build\CMakeFiles" 26
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Graphics_Labs.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/OpenGL_Lab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "E:\6th sem\Graphics\build\CMakeFiles" 0
-.PHONY : CMakeFiles/Graphics_Labs.dir/rule
+.PHONY : CMakeFiles/OpenGL_Lab.dir/rule
 
 # Convenience name for target.
-Graphics_Labs: CMakeFiles/Graphics_Labs.dir/rule
-.PHONY : Graphics_Labs
+OpenGL_Lab: CMakeFiles/OpenGL_Lab.dir/rule
+.PHONY : OpenGL_Lab
 
 # clean rule for target.
-CMakeFiles/Graphics_Labs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/clean
-.PHONY : CMakeFiles/Graphics_Labs.dir/clean
+CMakeFiles/OpenGL_Lab.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/clean
+.PHONY : CMakeFiles/OpenGL_Lab.dir/clean
 
 #=============================================================================
 # Target rules for target lib/glad/CMakeFiles/glad.dir

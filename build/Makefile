@@ -161,17 +161,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Graphics_Labs
+# Target rules for targets named OpenGL_Lab
 
 # Build rule for target.
-Graphics_Labs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Graphics_Labs
-.PHONY : Graphics_Labs
+OpenGL_Lab: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 OpenGL_Lab
+.PHONY : OpenGL_Lab
 
 # fast build rule for target.
-Graphics_Labs/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/build
-.PHONY : Graphics_Labs/fast
+OpenGL_Lab/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/build
+.PHONY : OpenGL_Lab/fast
 
 #=============================================================================
 # Target rules for targets named glad
@@ -225,29 +225,29 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f lib\glfw-3.4\src\CMakeFiles\update_mappings.dir\build.make lib/glfw-3.4/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
-srcs/Lab_4/transformation.obj: srcs/Lab_4/transformation.cpp.obj
-.PHONY : srcs/Lab_4/transformation.obj
+srcs/Lab_6/Lab_6_projection.obj: srcs/Lab_6/Lab_6_projection.cpp.obj
+.PHONY : srcs/Lab_6/Lab_6_projection.obj
 
 # target to build an object file
-srcs/Lab_4/transformation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj
-.PHONY : srcs/Lab_4/transformation.cpp.obj
+srcs/Lab_6/Lab_6_projection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/srcs/Lab_6/Lab_6_projection.cpp.obj
+.PHONY : srcs/Lab_6/Lab_6_projection.cpp.obj
 
-srcs/Lab_4/transformation.i: srcs/Lab_4/transformation.cpp.i
-.PHONY : srcs/Lab_4/transformation.i
+srcs/Lab_6/Lab_6_projection.i: srcs/Lab_6/Lab_6_projection.cpp.i
+.PHONY : srcs/Lab_6/Lab_6_projection.i
 
 # target to preprocess a source file
-srcs/Lab_4/transformation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.i
-.PHONY : srcs/Lab_4/transformation.cpp.i
+srcs/Lab_6/Lab_6_projection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/srcs/Lab_6/Lab_6_projection.cpp.i
+.PHONY : srcs/Lab_6/Lab_6_projection.cpp.i
 
-srcs/Lab_4/transformation.s: srcs/Lab_4/transformation.cpp.s
-.PHONY : srcs/Lab_4/transformation.s
+srcs/Lab_6/Lab_6_projection.s: srcs/Lab_6/Lab_6_projection.cpp.s
+.PHONY : srcs/Lab_6/Lab_6_projection.s
 
 # target to generate assembly for a file
-srcs/Lab_4/transformation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Graphics_Labs.dir\build.make CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.s
-.PHONY : srcs/Lab_4/transformation.cpp.s
+srcs/Lab_6/Lab_6_projection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Lab.dir\build.make CMakeFiles/OpenGL_Lab.dir/srcs/Lab_6/Lab_6_projection.cpp.s
+.PHONY : srcs/Lab_6/Lab_6_projection.cpp.s
 
 # Help Target
 help:
@@ -263,12 +263,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... uninstall
 	@echo ... update_mappings
-	@echo ... Graphics_Labs
+	@echo ... OpenGL_Lab
 	@echo ... glad
 	@echo ... glfw
-	@echo ... srcs/Lab_4/transformation.obj
-	@echo ... srcs/Lab_4/transformation.i
-	@echo ... srcs/Lab_4/transformation.s
+	@echo ... srcs/Lab_6/Lab_6_projection.obj
+	@echo ... srcs/Lab_6/Lab_6_projection.i
+	@echo ... srcs/Lab_6/Lab_6_projection.s
 .PHONY : help
 
 

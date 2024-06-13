@@ -1,9 +1,9 @@
 [
 {
   "directory": "E:/6th sem/Graphics/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Graphics_Labs.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Graphics_Labs.dir\\srcs\\Lab_4\\transformation.cpp.obj -c \"E:\\6th sem\\Graphics\\srcs\\Lab 4\\transformation.cpp\"",
-  "file": "E:/6th sem/Graphics/srcs/Lab 4/transformation.cpp",
-  "output": "CMakeFiles/Graphics_Labs.dir/srcs/Lab_4/transformation.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/OpenGL_Lab.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\OpenGL_Lab.dir\\srcs\\Lab_6\\Lab_6_projection.cpp.obj -c \"E:\\6th sem\\Graphics\\srcs\\Lab 6\\Lab 6_projection.cpp\"",
+  "file": "E:/6th sem/Graphics/srcs/Lab 6/Lab 6_projection.cpp",
+  "output": "CMakeFiles/OpenGL_Lab.dir/srcs/Lab_6/Lab_6_projection.cpp.obj"
 },
 {
   "directory": "E:/6th sem/Graphics/build/lib/glad",
